@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+    <name>Carousel Module</name>
+    <author>Brad Traversy</author>
+    <creationDate>Feb 2014</creationDate>
+    <copyright>Copyright (C) 2013 JoomDigi</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>brad@joomdigi.com</authorEmail>
+    <authorUrl>www.joomdigi.com</authorUrl>
+    <version>1.1</version>
+    <description>Place a Bootstrap 3 carousel slider in a module position</description>
+    <files>
+        <filename module="mod_carousel">mod_carousel.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_carousel.xml</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+        <fields name="params">   
+                <fieldset name="basic">
+                    <field 
+                        name="moduleclass_sfx" 
+                        type="text" 
+                        default="" 
+                        label="Module Class Suffix" 
+                        description="tag on a css class to the module wrap">
+                    </field>
+					
+					<field name="slide1_heading" type="text" default="Slide 1 Heading" label="Slide 1 Heading" description="The heading for slide 1"></field>
+					<field name="slide1_text" type="textarea" default="This is the body text for slide 1. You can change this from inside of the module manager" label="Slide 1 Text" description="The body text for slide 1"></field>
+					<field name="slide1_background_image" type="media" directory="stories" label="Slide 1 Background Image" description="This image should be at least the width of the module" />
+                    <field name="slide1_main_image" type="media" directory="stories" label="Slide 1 Main Image" description="This is the main image for this slide" />
+					<field name="slide1_button_text" type="text" default="Read More" label="Slide 1 Button Text" description="The text of the button"></field>
+					<field name="slide1_button_link" type="url" default="#" label="Slide 1 Button Link" description="The link of the button"></field>
+					<field name="slide1_show_read_more" type="radio" default="1" label="Slide 1 Show Readmore" description="Choose to show a read more button">
+                         <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </field>
+					
+					<field name="slide2_heading" type="text" default="Slide 2 Heading" label="Slide 2 Heading" description="The heading for slide 2"></field>
+					<field name="slide2_text" type="textarea" default="This is the body text for slide 2. You can change this from inside of the module manager" label="Slide 2 Text" description="The body text for slide 2"></field>
+					<field name="slide2_background_image" type="media" directory="stories" label="Slide 2 Background Image" description="This image should be at least the width of the module" />
+                    <field name="slide2_main_image" type="media" directory="stories" label="Slide 2 Main Image" description="This is the main image for this slide" />
+					<field name="slide2_button_text" type="text" default="Read More" label="Slide 2 Button Text" description="The text of the button"></field>
+					<field name="slide2_button_link" type="url" default="#" label="Slide 2 Button Link" description="The link of the button"></field>
+					<field name="slide2_show_read_more" type="radio" default="1" label="Slide 2 Show Readmore" description="Choose to show a read more button">
+                         <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </field>
+					
+					<field name="slide3_heading" type="text" default="Slide 3 Heading" label="Slide 3 Heading" description="The heading for slide 3"></field>
+					<field name="slide3_text" type="textarea" default="This is the body text for slide 3. You can change this from inside of the module manager" label="Slide 3 Text" description="The body text for slide 3"></field>
+					<field name="slide3_background_image" type="media" directory="stories" label="Slide 3 Background Image" description="This image should be at least the width of the module" />
+                    <field name="slide3_main_image" type="media" directory="stories" label="Slide 3 Main Image" description="This is the main image for this slide" />
+					<field name="slide3_button_text" type="text" default="Read More" label="Slide 3 Button Text" description="The text of the button"></field>
+					<field name="slide3_button_link" type="url" default="#" label="Slide 3 Button Link" description="The link of the button"></field>
+					<field name="slide3_show_read_more" type="radio" default="1" label="Slide 3 Show Readmore" description="Choose to show a read more button">
+                         <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </field>   
+                </fieldset>
+                <fieldset name="basic2" label="More options">
+                  <field name="custom_style" type="textarea" default="" label="Custom Style" description="Add custom style for you carousel"></field>
+                  <field name="slide1_caption_class" type="text" default="" label="Slide 1 Caption Class" description="The caption class for slide 1"></field>
+                  <field name="slide2_caption_class" type="text" default="" label="Slide 2 Caption Class" description="The caption class for slide 2"></field>
+                  <field name="slide3_caption_class" type="text" default="" label="Slide 3 Caption Class" description="The caption class for slide 3"></field>
+                </fieldset>
+        </fields>
+    </config>
+</extension>
