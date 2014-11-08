@@ -42,7 +42,6 @@ $slide1_caption_class = $params->get('slide1_caption_class');
 $slide2_caption_class = $params->get('slide2_caption_class');
 $slide3_caption_class = $params->get('slide3_caption_class');
 
-
 // Include the syndicate functions only once
 require_once dirname(__FILE__).'/helper.php';
 
