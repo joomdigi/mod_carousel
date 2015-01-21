@@ -23,21 +23,21 @@ defined('_JEXEC') or die;
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner container">
-    <?php for ($i = 1; $i <= 3; $i++) { 
-      $active = ($i === 1)? " active" : ""; ?>
+    <?php foreach ($slideritems as $key => $item) {
+      $active = ($key == 1)? " active" : ""; ?>
       <div class="item<?php echo $active; ?>">
-        <div class="carousel-caption">
-            <h1 class="carousel-title"><?php echo $slide_heading[$i]; ?></h1>
-            <?php if($slide_text[$i] != "no") : ?>
-            <p class="carousel-body"><?php echo $slide_text[$i]; ?></p>
+        <div class="carousel-caption col-md-5 col-md-offset-1">
+            <h1 class="carousel-title"><?php echo $item->heading; ?></h1>
+            <?php if($item->text != "no") : ?>
+            <p class="carousel-body"><?php echo $item->text; ?></p>
             <?php endif; ?>
-            <?php if($slide_show_read_more[$i]) : ?>
-             <p><a class="btn btn-lg btn-primary" href="<?php echo $slide_button_link[$i]; ?>" role="button"><?php echo $slide_button_text[$i]; ?></a></p>
+            <?php if($item->show_read_more) : ?>
+             <p><a class="btn btn-lg btn-primary" href="<?php echo $item->button_link; ?>" role="button"><?php echo $item->button_text; ?></a></p>
             <?php endif; ?>
         </div>
-        <?php if($slide_main_image[$i]) : ?>
-          <div class="carousel-image">
-            <img class="server" src="<?php echo JURI::base(); ?><?php echo $slide_main_image[$i]; ?>" alt="<?php echo $slide_heading[$i]; ?>" />
+        <?php if($item->main_image) : ?>
+          <div class="carousel-image col-md-6">
+            <img class="server" src="<?php echo JURI::base(); ?><?php echo $item->main_image; ?>" alt="<?php echo $item->heading; ?>" />
           </div>
         <?php endif; ?>
       </div>
