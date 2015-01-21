@@ -12,17 +12,19 @@ defined('_JEXEC') or die;
 
 /* Params */
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
-//store params into arrays that we can loop through in tmpl/default.php
-for ($i=1; $i <= 3; $i++) { 
-	$slide_heading[$i] = $params->get("slide".$i."_heading");
-	$slide_text[$i] = $params->get("slide".$i."_text");
-	$slide_background_image[$i] = $params->get("slide".$i."_background_image");
-	$slide_main_image[$i] = $params->get("slide".$i."_main_image");
-	$slide_button_text[$i] = $params->get("slide".$i."_button_text");
-	$slide_button_link[$i] = $params->get("slide".$i."_button_link");
-	$slide_show_read_more[$i] = $params->get("slide".$i."_show_read_more");
-}
 
+//store params as object that we can loop through in tmpl/default.php
+$slideritems = new stdClass;
+
+for ($i=1; $i <= 3; $i++) { 
+	$slideritems->$i->heading = $params->get("slide".$i."_heading");
+	$slideritems->$i->text = $params->get("slide".$i."_text");
+	$slideritems->$i->background_image = $params->get("slide".$i."_background_image");
+	$slideritems->$i->main_image = $params->get("slide".$i."_main_image");
+	$slideritems->$i->button_text = $params->get("slide".$i."_button_text");
+	$slideritems->$i->button_link = $params->get("slide".$i."_button_link");
+	$slideritems->$i->show_read_more = $params->get("slide".$i."_show_read_more");
+}
 
 // Include the syndicate functions only once
 require_once dirname(__FILE__).'/helper.php';
