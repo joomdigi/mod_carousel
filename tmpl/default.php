@@ -36,8 +36,8 @@ defined('_JEXEC') or die;
         <?php endif; ?>
     </div>
         <?php if($item->main_image) : ?>
-          <div class="carousel-image col-md-6">
-            <img class="server" src="<?php echo JURI::base(); ?><?php echo $item->main_image; ?>" alt="<?php if($slide3_button_link) : ?><a href="<?php echo $slide3_button_link; ?>"><?php endif; ?><img src="<?php echo JURI::base(); ?><?php echo $slide3_background_image; ?>" alt="<?php echo($item->heading && $item->heading != "Slide " . $key . " Heading" ? $item->heading : ""); ?>" />
+          <div class="carousel-image col-md-12">
+             <?php if($item->button_link) : ?><a href="<?php echo $item->button_link; ?>"><?php endif; ?><img class="server" src="<?php echo JURI::base(); ?><?php echo $item->main_image; ?>" alt="<?php echo($item->heading && $item->heading != "Slide " . $key . " Heading" ? $item->heading : ""); ?>" /><?php if($item->button_link) : ?></a><?php endif; ?></p>
     </div>
       <?php endif; ?>
     </div>
