@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later</license>
     <authorEmail>brad@joomdigi.com</authorEmail>
     <authorUrl>www.joomdigi.com</authorUrl>
-    <version>1.1.7</version>
+    <version>1.1.8</version>
     <description>Place a Bootstrap 3 carousel slider in a module position</description>
     <files>
         <filename module="mod_carousel">mod_carousel.php</filename>
