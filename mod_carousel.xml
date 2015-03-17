@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later</license>
     <authorEmail>brad@joomdigi.com</authorEmail>
     <authorUrl>www.joomdigi.com</authorUrl>
-    <version>1.1.3</version>
+    <version>1.1.5</version>
     <description>Place a Bootstrap 3 carousel slider in a module position</description>
     <files>
         <filename module="mod_carousel">mod_carousel.php</filename>
@@ -57,6 +57,39 @@
 					<field name="slide3_button_text" type="text" default="" label="Slide 3 Button Text" description="The text of the button"></field>
 					<field name="slide3_button_link" type="url" default="" label="Slide 3 Button Link" description="The link of the button"></field>
 					<field name="slide3_show_read_more" type="radio" default="1" label="Slide 3 Show Readmore" description="Choose to show a read more button">
+                         <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </field>   
+					
+					<field name="slide4_heading" type="text" default="" label="Slide 4 Heading" description="The heading for Slide 4"></field>
+					<field name="slide4_text" type="textarea" default="" label="Slide 4 Text" description="The body text for Slide 4"></field>
+					<field name="slide4_background_image" type="media" directory="stories" label="Slide 4 Background Image" description="This image should be at least the width of the module" />
+                    <field name="slide4_main_image" type="media" directory="stories" label="Slide 4 Main Image" description="This is the main image for this slide" />
+					<field name="slide4_button_text" type="text" default="" label="Slide 4 Button Text" description="The text of the button"></field>
+					<field name="slide4_button_link" type="url" default="" label="Slide 4 Button Link" description="The link of the button"></field>
+					<field name="slide4_show_read_more" type="radio" default="1" label="Slide 4 Show Readmore" description="Choose to show a read more button">
+                         <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </field>
+					
+					<field name="slide5_heading" type="text" default="" label="Slide 5 Heading" description="The heading for Slide 5"></field>
+					<field name="slide5_text" type="textarea" default="" label="Slide 5 Text" description="The body text for Slide 5"></field>
+					<field name="slide5_background_image" type="media" directory="stories" label="Slide 5 Background Image" description="This image should be at least the width of the module" />
+                    <field name="slide5_main_image" type="media" directory="stories" label="Slide 5 Main Image" description="This is the main image for this slide" />
+					<field name="slide5_button_text" type="text" default="" label="Slide 5 Button Text" description="The text of the button"></field>
+					<field name="slide5_button_link" type="url" default="" label="Slide 5 Button Link" description="The link of the button"></field>
+					<field name="slide5_show_read_more" type="radio" default="1" label="Slide 5 Show Readmore" description="Choose to show a read more button">
+                         <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </field>
+					
+					<field name="slide6_heading" type="text" default="" label="Slide 6 Heading" description="The heading for Slide 6"></field>
+					<field name="slide6_text" type="textarea" default="" label="Slide 6 Text" description="The body text for Slide 6"></field>
+					<field name="slide6_background_image" type="media" directory="stories" label="Slide 6 Background Image" description="This image should be at least the width of the module" />
+                    <field name="slide6_main_image" type="media" directory="stories" label="Slide 6 Main Image" description="This is the main image for this slide" />
+					<field name="slide6_button_text" type="text" default="" label="Slide 6 Button Text" description="The text of the button"></field>
+					<field name="slide6_button_link" type="url" default="" label="Slide 6 Button Link" description="The link of the button"></field>
+					<field name="slide6_show_read_more" type="radio" default="1" label="Slide 6 Show Readmore" description="Choose to show a read more button">
                          <option value="1">Yes</option>
                         <option value="0">No</option>
                     </field>   
