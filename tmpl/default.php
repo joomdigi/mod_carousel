@@ -22,61 +22,27 @@ defined('_JEXEC') or die;
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <?php if($slide1_background_image) : ?>
-        <?php if($slide1_button_link) : ?><a href="<?php echo $slide1_button_link; ?>"><?php endif; ?><img src="<?php echo JURI::base(); ?><?php echo $slide1_background_image; ?>" alt="<?php echo($slide1_heading && $slide1_heading != "Slide 1 Heading" ? $slide1_heading : ""); ?>"><?php if($slide1_button_link) : ?></a><?php endif; ?>
-      <?php else : ?>
-        <img data-src="holder.js/900x500/auto/#555:#5555" alt="900x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNTU1NTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZTo1NnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjkwMHg1MDA8L3RleHQ+PC9zdmc+">
+  <div class="carousel-inner container">
+    <?php foreach ($slideritems as $key => $item) {
+      $active = ($key == 1)? " active" : ""; ?>
+      <div class="item<?php echo $active; ?>">
+        <div class="carousel-caption col-md-5 col-md-offset-1">
+            <h1 class="carousel-title"><?php echo $item->heading; ?></h1>
+            <?php if($item->text != "no") : ?>
+            <p class="carousel-body"><?php echo $item->text; ?></p>
       <?php endif; ?>
-      <div class="carousel-caption">
-        <?php if($slide1_main_image) : ?>
-          <div class="carousel-image"><img class="server" src="<?php echo JURI::base(); ?><?php echo $slide1_main_image; ?>" alt="<?php echo($slide1_heading && $slide1_heading != "Slide 1 Heading" ?  $slide1_heading : ""); ?>" /></div>
-        <?php endif; ?>
-        <?php if($slide1_heading && $slide1_heading != "Slide 1 Heading") : ?><h1 class="carousel-title"><?php echo $slide1_heading; ?></h1><?php endif; ?>
-        <?php if($slide1_text && $slide1_text != "This is the body text for slide 1. You can change this from inside of the module manager") : ?><p class="carousel-body"><?php echo $slide1_text; ?></p><?php endif; ?>
-        <?php if($slide1_show_read_more) : ?>
-         <p><a class="btn btn-link" href="<?php echo $slide1_button_link; ?>" role="button"><?php echo $slide1_button_text; ?></a></p>
+            <?php if($item->show_read_more) : ?>
+             <p><?php if($item->button_link) : ?><a class="btn btn-link" href="<?php echo $item->button_link; ?>" role="button"><?php endif; ?><?php echo $item->button_text; ?><?php if($item->button_link) : ?></a><?php endif; ?></p>
         <?php endif; ?>
     </div>
+        <?php if($item->main_image) : ?>
+          <div class="carousel-image col-md-6">
+            <img class="server" src="<?php echo JURI::base(); ?><?php echo $item->main_image; ?>" alt="<?php if($slide3_button_link) : ?><a href="<?php echo $slide3_button_link; ?>"><?php endif; ?><img src="<?php echo JURI::base(); ?><?php echo $slide3_background_image; ?>" alt="<?php echo($item->heading && $item->heading != "Slide " . $key . " Heading" ? $item->heading : ""); ?>" />
     </div>
-    
-  <div class="item">
-    <?php if($slide2_background_image) : ?>
-        <?php if($slide2_button_link) : ?><a href="<?php echo $slide2_button_link; ?>"><?php endif; ?><img src="<?php echo JURI::base(); ?><?php echo $slide2_background_image; ?>" alt="<?php echo($slide2_heading && $slide2_heading != "Slide 2 Heading" ? $slide1_heading : ""); ?>"><?php if($slide2_button_link) : ?></a><?php endif; ?>
-      <?php else : ?>
-        <img data-src="holder.js/900x500/auto/#555:#5555" alt="900x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNTU1NTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZTo1NnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjkwMHg1MDA8L3RleHQ+PC9zdmc+">
       <?php endif; ?>
-     <div class="carousel-caption">
-      <?php if($slide2_main_image) : ?>
-        <div class="carousel-image"><img class="server" src="<?php echo JURI::base(); ?><?php echo $slide2_main_image; ?>" alt="<?php echo($slide2_heading && $slide2_heading != "Slide 2 Heading" ? $slide1_heading : ""); ?>" /></div>
-      <?php endif; ?>
-        <?php if($slide2_heading && $slide2_heading != "Slide 2 Heading") : ?><h1 class="carousel-title"><?php echo $slide2_heading; ?></h1><?php endif; ?>
-        <?php if($slide2_text && $slide2_text != "This is the body text for slide 2. You can change this from inside of the module manager") : ?><p class="carousel-body"><?php echo $slide2_text; ?></p><?php endif; ?>
-        <?php if($slide2_show_read_more) : ?>
-         <p><a class="btn btn-link" href="<?php echo $slide2_button_link; ?>" role="button"><?php echo $slide2_button_text; ?></a></p>
-        <?php endif; ?>
     </div>
+    <?php } ?>
     </div>
-  
-  <div class="item">
-    <?php if($slide3_background_image) : ?>
-        <?php if($slide3_button_link) : ?><a href="<?php echo $slide3_button_link; ?>"><?php endif; ?><img src="<?php echo JURI::base(); ?><?php echo $slide3_background_image; ?>" alt="<?php echo($slide3_heading && $slide3_heading != "Slide 3 Heading" ? $slide3_heading : ""); ?>"><?php if($slide3_button_link) : ?></a><?php endif; ?>
-      <?php else : ?>
-        <img data-src="holder.js/900x500/auto/#555:#5555" alt="900x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNTU1NTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZTo1NnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjkwMHg1MDA8L3RleHQ+PC9zdmc+">
-      <?php endif; ?>
-       <div class="carousel-caption">
-        <?php if($slide1_main_image) : ?>
-          <div class="carousel-image"><img class="server" src="<?php echo JURI::base(); ?><?php echo $slide3_main_image; ?>" alt="<?php echo($slide3_heading && $slide3_heading != "Slide 3 Heading" ? $slide1_heading : ""); ?>" /></div>
-        <?php endif; ?>
-        <?php if($slide3_heading && $slide3_heading != "Slide 3 Heading") : ?><h1 class="carousel-title"><?php echo $slide3_heading; ?></h1><?php endif; ?>
-        <?php if($slide3_text && $slide3_text != "This is the body text for slide 3. You can change this from inside of the module manager") : ?><p class="carousel-body"><?php echo $slide3_text; ?></p><?php endif; ?>
-        <?php if($slide3_show_read_more) : ?>
-         <p><a class="btn btn-link" href="<?php echo $slide3_button_link; ?>" role="button"><?php echo $slide3_button_text; ?></a></p>
-        <?php endif; ?>
-    </div>
-    </div>
-  </div>
 
   <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
