@@ -61,6 +61,13 @@
                         <option value="0">No</option>
                     </field>   
                 </fieldset>
+                
+                <fieldset name="basic2" label="More options">
+                  <field name="custom_style" type="textarea" default="" label="Custom Style" description="Add custom style for you carousel"></field>
+                  <field name="slide1_caption_class" type="text" default="" label="Slide 1 Caption Class" description="The caption class for slide 1"></field>
+                  <field name="slide2_caption_class" type="text" default="" label="Slide 2 Caption Class" description="The caption class for slide 2"></field>
+                  <field name="slide3_caption_class" type="text" default="" label="Slide 3 Caption Class" description="The caption class for slide 3"></field>
+                </fieldset>
         </fields>
     </config>
 </extension>

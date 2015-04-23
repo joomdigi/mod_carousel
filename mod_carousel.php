@@ -36,6 +36,12 @@ $slide3_button_text = $params->get('slide3_button_text');
 $slide3_button_link = $params->get('slide3_button_link');
 $slide3_show_read_more = $params->get('slide3_show_read_more');
 
+//more options
+$custom_style = $params->get('custom_style');
+$slide1_caption_class = $params->get('slide1_caption_class');
+$slide2_caption_class = $params->get('slide2_caption_class');
+$slide3_caption_class = $params->get('slide3_caption_class');
+
 // Include the syndicate functions only once
 require_once dirname(__FILE__).'/helper.php';
 
