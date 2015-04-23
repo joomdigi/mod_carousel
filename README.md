@@ -1,10 +1,10 @@
-# APPNAME #
+# Joomla Bootstrap Carouse #
 
 **Bootstrap Carousel Module** is a module for Joomla 2.5+ which displays a carousel of images
 
 
 ## Version ##
-**1.0**
+**1.1**
 
 ##Installation & Usage##
 Instal via **Extension Manager** in Joomla admin area
