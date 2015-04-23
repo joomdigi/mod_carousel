@@ -14,12 +14,6 @@ defined('_JEXEC') or die;
 </style>
  
  <div id="myCarousel" class="carousel slide">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner container">
@@ -51,4 +45,11 @@ defined('_JEXEC') or die;
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
           <span class="icon-next"></span>
         </a>
+ 
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 </div>

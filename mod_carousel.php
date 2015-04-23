@@ -17,6 +17,7 @@ $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 $slideritems = new stdClass;
 
 for ($i=1; $i <= 3; $i++) { 
+        $slideritems->$i = new stdClass;
 	$slideritems->$i->heading = $params->get("slide".$i."_heading");
 	$slideritems->$i->text = $params->get("slide".$i."_text");
 	$slideritems->$i->background_image = $params->get("slide".$i."_background_image");
