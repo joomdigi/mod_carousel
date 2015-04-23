@@ -1,4 +1,4 @@
-# Joomla Bootstrap Carouse #
+# Joomla Bootstrap Carousel #
 
 **Bootstrap Carousel Module** is a module for Joomla 2.5+ which displays a carousel of images
 
