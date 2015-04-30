@@ -57,4 +57,4 @@ defined('_JEXEC') or die;
           <span class="icon-next"></span>
         </a>
 </div>
->>>>>>> 6248772a906d6369fc6cafe301b56bd883689c50
+

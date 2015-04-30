@@ -16,12 +16,9 @@ $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 //store params as object that we can loop through in tmpl/default.php
 $slideritems = new stdClass;
 
-<<<<<<< HEAD
-for ($i=1; $i <= 3; $i++) { 
-        $slideritems->$i = new stdClass;
-=======
+
 for ($i=1; $i <= 6; $i++) { 
->>>>>>> 6248772a906d6369fc6cafe301b56bd883689c50
+	$slideritems->$i = new stdClass;
 	$slideritems->$i->heading = $params->get("slide".$i."_heading");
 	$slideritems->$i->text = $params->get("slide".$i."_text");
 	$slideritems->$i->background_image = $params->get("slide".$i."_background_image");
