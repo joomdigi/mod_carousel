@@ -13,7 +13,12 @@ defined('_JEXEC') or die;
     <?php echo $custom_style; ?>
 </style>
 
-<div id="myCarousel" class="carousel slide">
+<div id="myCarousel" class="carousel slide" 
+     data-ride="carousel"
+     data-interval="<?php echo $slideInterval ?>" 
+     data-pause="<?php echo $pauseSlide ?>" 
+     data-wrap="<?php echo $wrapSlide ?>" 
+     data-keyboard="<?php echo $keyboardSlide ?>">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

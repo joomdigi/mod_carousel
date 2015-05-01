@@ -27,8 +27,9 @@
                         label="Module Class Suffix" 
                         description="tag on a css class to the module wrap">
                     </field>
-					
-					<field name="slide1_heading" type="text" default="Slide 1 Heading" label="Slide 1 Heading" description="The heading for slide 1"></field>
+					<field name="interval_slide" type="text" default="5000" label="Time interval for sliding (in ms)" description="The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle."></field>
+                    
+					<field name="slide1_heading" type="text" default="Slide 1 Heading ke" label="Slide 1 Heading" description="The heading for slide 1"></field>
 					<field name="slide1_text" type="textarea" default="This is the body text for slide 1. You can change this from inside of the module manager" label="Slide 1 Text" description="The body text for slide 1"></field>
 					<field name="slide1_background_image" type="media" directory="stories" label="Slide 1 Background Image" description="This image should be at least the width of the module" />
                     <field name="slide1_main_image" type="media" directory="stories" label="Slide 1 Main Image" description="This is the main image for this slide" />
@@ -67,6 +68,10 @@
                   <field name="slide1_caption_class" type="text" default="" label="Slide 1 Caption Class" description="The caption class for slide 1"></field>
                   <field name="slide2_caption_class" type="text" default="" label="Slide 2 Caption Class" description="The caption class for slide 2"></field>
                   <field name="slide3_caption_class" type="text" default="" label="Slide 3 Caption Class" description="The caption class for slide 3"></field>
+                  
+                  <field name="pause_slide" type="text" default="hover" label="Pause on hover" description="Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave. (value: 'hover' - 'mouseout' - 'mousein' - 'focusout' - 'focusin')"></field>
+                  <field name="wrap_slide" type="text" default="true" label="Wrap sliding" description="Whether the carousel should cycle continuously or have hard stops."></field>
+                  <field name="keyboard_slide" type="text" default="true" label="Keyboard react" description="Whether the carousel should react to keyboard events."></field>
                 </fieldset>
         </fields>
     </config>

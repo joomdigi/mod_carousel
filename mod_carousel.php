@@ -11,6 +11,7 @@ defined('_JEXEC') or die;
 
 /* Params */
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+$slideInterval = $params->get('interval_slide');
 
 $slide1_heading = $params->get('slide1_heading');
 $slide1_text = $params->get('slide1_text');
@@ -41,6 +42,9 @@ $custom_style = $params->get('custom_style');
 $slide1_caption_class = $params->get('slide1_caption_class');
 $slide2_caption_class = $params->get('slide2_caption_class');
 $slide3_caption_class = $params->get('slide3_caption_class');
+$pauseSlide = $params->get('pause_slide');
+$wrapSlide = $params->get('wrap_slide');
+$keyboardSlide = $params->get('keyboard_slide');
 
 // Include the syndicate functions only once
 require_once dirname(__FILE__).'/helper.php';
